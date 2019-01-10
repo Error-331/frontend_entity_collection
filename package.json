@@ -1,0 +1,56 @@
+{
+  "name": "@webfuturistics/frontend_entity_collection",
+  "version": "0.0.1",
+  "description": "Package that holds all necessary means to load entity collections",
+  "keywords": [
+    "entity",
+    "collection",
+    "sagas",
+    "redux",
+    "webfuturistics"
+  ],
+  "homepage": "https://github.com/WebFuturistics/frontend_entity_collection",
+  "main": "./lib/index.js",
+  "engines": {
+    "node": ">=8.11.2"
+  },
+  "scripts": {
+    "install-flow-types": "flow-typed install",
+    "prepublish-submodule": "rm -rf ./lib/ ; npm run prepublish-babel && npm run prepublish-flow",
+    "prepublish-babel": "babel ./src --out-dir ./lib",
+    "prepublish-flow": "flow-copy-source ./src ./lib",
+    "lint-files": "eslint --format=pretty ./src"
+  },
+  "author": {
+    "name": "Sergei Selihov",
+    "email": "red331@mail.ru",
+    "url": "https://github.com/Error-331"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WebFuturistics/frontend_entity_collection"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@webfuturistics/design_components": "github:WebFuturistics/js_design_components",
+    "@webfuturistics/frontend_authentication": "github:WebFuturistics/frontend_authentication",
+    "ramda": "0.26.1",
+    "immutable": "3.8.2",
+    "redux-saga": "0.16.2",
+    "reselect": "4.0.0"
+  },
+  "devDependencies": {
+    "eslint": "5.10.0",
+    "eslint-formatter-pretty": "2.0.0",
+    "eslint-plugin-babel": "5.3.0",
+    "eslint-plugin-flowtype": "3.2.0",
+    "flow-bin": "0.73.0",
+    "flow-typed": "2.5.1",
+    "flow-copy-source": "2.0.2",
+    "babel-cli": "6.26.0",
+    "babel-eslint": "10.0.1",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-flow": "6.23.0"
+  }
+}
